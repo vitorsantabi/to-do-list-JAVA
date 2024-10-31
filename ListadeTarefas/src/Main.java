@@ -1,13 +1,11 @@
 import java.util.Scanner;
 import java.util.List;
 
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GerenciadorDeTarefas gerenciador = new GerenciadorDeTarefas();
 
-        // Carregar tarefas salvas (se houver)
         List<Tarefa> tarefasSalvas = ArquivoDeTarefas.carregarTarefas();
         if (tarefasSalvas != null) {
             for (Tarefa tarefa : tarefasSalvas) {
@@ -24,7 +22,7 @@ public class Main {
             System.out.println("5. Salvar e Sair");
 
             int opcao = scanner.nextInt();
-            scanner.nextLine();  // Consumir nova linha
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
